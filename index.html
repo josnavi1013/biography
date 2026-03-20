@@ -4,25 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
+    <style>
+        body{
+            margin: 0px;
+            background-image: url("https://woorise.com/wp-content/uploads/2021/03/Online-event-registration.png");
+            background-size: cover;
+            min-height: 100vh;
+        }
+        .container{
+            
+            width: 35%;
+            border-radius: 10px;
+            border: 2px solid black;
+            padding:1% 4% 1% 4%;
+            margin: auto;
+            margin-top: 2%;
+        }
+        .container h2{
+            font-family: sans-serif;
+            text-align: center;
+            margin-bottom: 15px;
+            
+        }
+        .form-field input{
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black; 
+            background: transparent;
+            outline: none;
+            padding: 7px;
+            margin-bottom: 12px;
+            width: 90%;
+            color: black;
+        }
+        input::placeholder {
+            color: black;      
+
+        }
+        .form-checkbox label{
+            margin-right: 10px;
+        }
+        .form-checkbox{
+            margin: 10px;
+            margin-left:0px;
+        }
+        p{
+            margin-top: 0px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .submit-btn {
+            
+            background-image: linear-gradient(to right, #801a6a 0%, #26D0CE 51%, #1A2980 100%);
+            margin:10px 130px;
+            padding: 15px 60px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            
+            border-radius: 10px;
+            display: block;
+            outline: none;
+            border: none;
+        }
+
+    </style>
 </head>
 <body>
-    <center>
+    
+    <form action="./login.html" class="container">
         <h2>REGISTRATION PAGE</h2>
-        <form action="./login.html">
-            <label>Name:<input type="text" name="u_name" required></label><br><br>
-            <label>Email:<input type="email" name="email" required></label><br><br>
-            <label>Password: <input type="password" required></label><br><br>
-            <label>Confirm Password: <input type="password" required></label><br><br>
-            <label>Mobile number: <input type="phone"></label><br><br>
-            <label>Gender:<input type="radio" name="gender" value="male">Male <input type="radio" name="gender" value="female">Female</label><br><br>
-            <label>Educatinal Details:</label><br>
-            <input type="text" placeholder="university name">
-            <input type="date" placeholder="passout year" required><br>
-            <input type="text" placeholder="enter CGPA"><br><br>
-            <label>Date of Birth: <input type="date" required></label><br><br>
-            <input type="submit" placeholder="submit">
-        </form>
+            <div class="form-field">
+                <input type="text" name="u_name" placeholder="Enter the Name" required>
+            </div>
+            <div class="form-field">
+                <input type="email" name="email" placeholder="Enter the Email" required/>
+            </div>
+            <div class="form-field">
+                <input type="password" placeholder="Enter the password" required/>
+            </div>
+            <div class="form-field">
+                <input type="password" placeholder="Confirm password" required/>
+            </div>
+            <div class="form-field">
+                <input type="phone" placeholder="Enter the Mobile Number">
+            </div>
+            <div class="form-gender">
+                <input type="radio" name="gender" value="male">Male <input type="radio" name="gender" value="female">Female</label>
+            </div>
+            <div class="form-checkbox">
+                    <label><input type="checkbox" name="education" value="10th">10th</label>
+                    <label><input type="checkbox" name="education" value="inter">Intermediate</label>
+                    <label><input type="checkbox" name="education" value="diploma">Diploma</label>
+                    <label><input type="checkbox" name="education" value="ug">UG</label>
+                    <label><input type="checkbox" name="education" value="pg">PG</label>
+            </div>
+            <div class="form-field">
+                <input type="date" />
+            </div>
+            <div class="form-field">
+                <input type="file">
+            </div>
+            <p>Do you have an account? <a href="./login.html">login</a></p>
+            
+            <button type="submit" class="submit-btn" >Submit</button>
+           
+    </form>
         
-    </center>
+    
 </body>
 </html>

@@ -4,18 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            background-image: url("https://woorise.com/wp-content/uploads/2021/03/Online-event-registration.png");
+            background-size: cover;
+            min-height: 100vh;
+        }
+        .container{
+            
+            width: 25%;
+            border-radius: 10px;
+            border: 2px solid black;
+            padding:1% 4% 1% 4%;
+            margin: auto;
+            margin-top: 10%;
+        }
+        .container h2{
+            font-family: sans-serif;
+            text-align: center;
+            margin-bottom: 15px;
+            
+        }
+        .form-field input{
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black; 
+            background: transparent;
+            outline: none;
+            padding: 7px;
+            margin-bottom: 12px;
+            width: 90%;
+            color: black;
+        }
+        input::placeholder {
+            color: black;      
+
+        }
+        p{
+            margin-top: 0px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .submit-btn {
+            
+            background-image: linear-gradient(to right, #801a6a 0%, #26D0CE 51%, #1A2980 100%);
+            margin:10px 80px;
+            padding: 15px 60px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            
+            border-radius: 10px;
+            display: block;
+            outline: none;
+            border: none;
+        }
+
+    </style>
 </head>
 <body>
-    <center>
-        <h2>LOG IN</h2>
-        <form action="./biography.html">
-            <label>Email: <input type="email" name="email"></label><br><br>
-            <label>Password: <input type="pssword" name="pass"></label>
+    
+        
+        <form action="./biography.html" class="container">
+            <h2>LOG IN</h2>
+            <div class="form-field">
+                <input type="email" name="email" placeholder="Enter the Email">
+            </div>
+            <div class="form-field">
+                <input type="pssword" name="pass" placeholder="Enter the password">
+            </div>
             <p><a>Forget password ?</a></p>
-            <p>Do you have an account? <a href="./index.html">Register</a></p>
-            <input type="submit">
+            <p>Dont have an account? <a href="./index.html">Register</a></p>
+            <button type="submit" class="submit-btn" >Login</button>
         </form>
         
-    </center>
+    
 </body>
 </html>
